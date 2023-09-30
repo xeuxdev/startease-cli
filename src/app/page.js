@@ -1,113 +1,166 @@
-import Image from 'next/image'
+import { Card, CardHeader } from "@/components/card"
+import Code from "@/components/code"
+import { Button } from "@/components/ui/button"
+import StepIndicator from "@/components/ui/step"
+import Image from "next/image"
+import Arrow from "../../public/arrow.svg"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
+    <main>
+      <section className="min-h-[calc(100vh-84px)] flex items-center justify-center p-8 text-[#D0D0D0] flex-col gap-5">
+        <h1 className="text-2xl md:text-4xl text-center lg:text-6xl font-bold md:[text-wrap:balance] ">
+          Welcome to{" "}
+          <span className="text-[#B50101]">Project-starter-cli </span>
+          Streamline Your Project Setup Process with Ease
+        </h1>
+        <p className="text-base text-center md:text-lg [text-wrap:balance]">
+          <span className="text-[#B50101]">Project-starter-cli </span> is a
+          versatile command-line tool designed to simplify the process of
+          starting new projects. Whether you&apos;re a backend developer diving
+          into Express.js or Nest.js, or a frontend enthusiast embracing
+          React.js, Project-starter-cli empowers you to create robust project
+          foundations in just a few simple steps.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+        <Button className="my-20">Get Started</Button>
+
+        <div className="p-8 bg-gradient-to-br rounded-3xl from-secondary to-[#0401B5]  h-[22.9375rem] w-full md:w-[46.25rem] flex items-center justify-center">
+          <p>Picture</p>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+      {/* steps */}
+      <section className="my-[6.25rem] px-5 flex flex-col gap-10 container">
+        {/* installation */}
+        <Card>
+          <StepIndicator step={1} />
+          <CardHeader>Installation</CardHeader>
+          <p>
+            Setting up Project-starter-cli is effortless. Follow these steps to
+            get started Open your terminal. Run the following command to install
+            Project-starter-cli globally:
           </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <Code snippet={"npm install -g project-starter-cli"} />
+        </Card>
+        {/*  */}
+        <Card>
+          <StepIndicator step={2} />
+          <CardHeader>Usage Guide</CardHeader>
+          <p>Generate new projects swiftly using Project-starter-cli:</p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+          <Code
+            snippet={
+              "Open your terminal Run the following command to launch the CLI tool: project-starter"
+            }
+          />
+        </Card>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+        {/*  */}
+        <Card>
+          <StepIndicator step={3} />
+          <p>
+            Answer the prompts to select your project type, framework, and
+            complexity. Sit back as Project-starter-cli automates file creation
+            and project setup. With Project-starter-cli, you can focus on
+            building your vision without being bogged down by setup
+            complexities.
           </p>
-        </a>
-      </div>
+        </Card>
+      </section>
+
+      {/* features */}
+
+      <section className="my-[6.25rem] flex flex-col container">
+        <div className="flex flex-col items-center justify-center gap-6 mb-[6.25rem]">
+          <Button asChild className={"px-10 text-lg mx-auto text-center"}>
+            <h2>Features</h2>
+          </Button>
+
+          <p className="text-primary">
+            Experience the power of Project-starter-cli:
+          </p>
+        </div>
+
+        {/* features */}
+
+        <div className="grid grid-cols-1 gap-10 px-5 md:grid-cols-2">
+          <Card>
+            <StepIndicator step={1} />
+            <p>
+              <span className="font-bold text-white">Effortless Setup:</span>{" "}
+              Say goodbye to tedious project setup tasks. Let
+              Project-starter-cli handle the heavy lifting.
+            </p>
+          </Card>
+          {/*  */}
+          <Card>
+            <StepIndicator step={2} />
+            <p>
+              <span className="font-bold text-white">
+                Framework Flexibility:
+              </span>{" "}
+              Supports popular frameworks like Express.js, Nest.js, and
+              React.js.
+            </p>
+          </Card>
+          {/*  */}
+          <Card>
+            <StepIndicator step={3} />
+            <p>
+              <span className="font-bold text-white">Basic or Advanced:</span>{" "}
+              Choose between basic or advanced project configurations based on
+              your needs.
+            </p>
+          </Card>
+          {/*  */}
+          <Card>
+            <StepIndicator step={4} />
+            <p>
+              <span className="font-bold text-white">Customization:</span>{" "}
+              Extend and customize generated files to match your project&apos;s
+              unique requirements.
+            </p>
+          </Card>
+        </div>
+      </section>
+
+      {/* contribution */}
+
+      <section className="my-[6.25rem] flex flex-col container">
+        <div className="flex flex-col items-center justify-center gap-6 mb-[4.675rem]">
+          <Button asChild className={"p-7 text-lg mx-auto text-center"}>
+            <h2>Contribution Guidelines</h2>
+          </Button>
+
+          <p className="text-primary">
+            We appreciate contributions from the community to enhance
+            Project-starter-cli. Here&apos;s how you can get involved:
+          </p>
+        </div>
+
+        {/* lists */}
+
+        <div className="relative flex items-center justify-center w-full gap-10 px-5">
+          <ul className="list-disc">
+            <li>Fork the repository and clone your fork.</li>
+            <li>Create a new branch for feature or bug fix.</li>
+            <li>Develop and test your changes.</li>
+            <li>Commit your changes and create a pull request.</li>
+            <li>
+              Our maintainers will review your pull request and provide
+              feedback.
+            </li>
+            <li>
+              Your contribution help make project starter cli better for
+              everyone!.
+            </li>
+          </ul>
+
+          <Image src={Arrow} alt="" className="-translate-y-20" />
+        </div>
+      </section>
     </main>
   )
 }
