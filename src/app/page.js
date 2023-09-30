@@ -134,7 +134,7 @@ export default function Home() {
             <h2>Contribution Guidelines</h2>
           </Button>
 
-          <p className="text-primary">
+          <p className="text-primary text-center">
             We appreciate contributions from the community to enhance
             Project-starter-cli. Here&apos;s how you can get involved:
           </p>
@@ -158,7 +158,11 @@ export default function Home() {
             </li>
           </ul>
 
-          <Image src={Arrow} alt="" className="-translate-y-20" />
+          <Image
+            src={Arrow}
+            alt=""
+            className="-translate-y-20 hidden md:block"
+          />
         </div>
       </section>
     </main>
