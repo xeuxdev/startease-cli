@@ -5,8 +5,9 @@ import { Inter } from "next/font/google"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Project Starter Kit",
-  description: "Start your projects ASAP with our project starter ",
+  title: "StartEase ",
+  description:
+    "StartEase is a command-line interface (CLI) tool designed to make project setup a breeze.",
 }
 
 export default function RootLayout({ children }) {

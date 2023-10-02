@@ -3,31 +3,38 @@ import Code from "@/components/code"
 import { Button } from "@/components/ui/button"
 import StepIndicator from "@/components/ui/step"
 import Image from "next/image"
-import Arrow from "../../public/arrow.svg"
+import Link from "next/link"
+import HeroImage from "../../public/startease.webp"
 
 export default function Home() {
   return (
     <main>
-      <section className="min-h-[calc(100vh-84px)] flex items-center justify-center p-8 text-[#D0D0D0] flex-col gap-5">
-        <h1 className="text-2xl md:text-4xl text-center lg:text-6xl font-bold md:[text-wrap:balance] ">
-          Welcome to{" "}
-          <span className="text-[#B50101]">Project-starter-cli </span>
+      <section className="flex items-center justify-center p-8 text-[#D0D0D0] flex-col gap-5">
+        <h1 className="text-2xl md:text-4xl text-center lg:text-6xl font-bold md:[text-wrap:balance] py-20 ">
+          Welcome to <span className="text-[#B50101]">StartEase </span>
           Streamline Your Project Setup Process with Ease
         </h1>
         <p className="text-base text-center md:text-lg [text-wrap:balance]">
-          <span className="text-[#B50101]">Project-starter-cli </span> is a
-          versatile command-line tool designed to simplify the process of
-          starting new projects. Whether you&apos;re a backend developer diving
-          into Express.js or Nest.js, or a frontend enthusiast embracing
-          React.js, Project-starter-cli empowers you to create robust project
-          foundations in just a few simple steps.
+          <span className="text-[#B50101]">StartEase </span> is a versatile
+          command-line tool designed to simplify the process of starting new
+          projects. Whether you&apos;re a backend developer diving into
+          Express.js or Nest.js, or a frontend enthusiast embracing React.js,
+          StartEase empowers you to create robust project foundations in just a
+          few simple steps.
         </p>
 
-        <Button className="my-20">Get Started</Button>
+        <Button className="my-20" asChild>
+          <Link href={"https://github.com/JC-Coder/startease"} target="_blank">
+            Get Started
+          </Link>
+        </Button>
 
-        <div className="p-8 bg-gradient-to-br rounded-3xl from-secondary to-[#0401B5]  h-[22.9375rem] w-full md:w-[46.25rem] flex items-center justify-center">
-          <p>Picture</p>
+        <div className="  h-[22.9375rem] w-full md:w-[46.25rem] relative">
+          <Image src={HeroImage} alt="StartEase cli" />
         </div>
+        {/* <div className="p-8 bg-gradient-to-br rounded-3xl from-secondary to-[#0401B5]  h-[22.9375rem] w-full md:w-[46.25rem] flex items-center justify-center">
+          <p>Picture</p>
+        </div> */}
       </section>
 
       {/* steps */}
@@ -37,24 +44,27 @@ export default function Home() {
           <StepIndicator step={1} />
           <CardHeader>Installation</CardHeader>
           <p>
-            Setting up Project-starter-cli is effortless. Follow these steps to
-            get started Open your terminal. Run the following command to install
-            Project-starter-cli globally:
+            Setting up StartEase is effortless. Follow these steps to get
+            started Open your terminal. Run the following command to install
+            StartEase globally:
           </p>
 
-          <Code snippet={"npm install -g project-starter-cli"} />
+          <p>npm</p>
+          <Code snippet={"npm install -g startease-cli"} />
+
+          <p>yarn</p>
+          <Code snippet={"yarn global add startease-cli"} />
         </Card>
         {/*  */}
         <Card>
           <StepIndicator step={2} />
           <CardHeader>Usage Guide</CardHeader>
-          <p>Generate new projects swiftly using Project-starter-cli:</p>
+          <p>Generate new projects swiftly using StartEase:</p>
 
-          <Code
-            snippet={
-              "Open your terminal Run the following command to launch the CLI tool: project-starter"
-            }
-          />
+          <p>
+            Open your terminal Run the following command to launch the CLI tool
+          </p>
+          <Code snippet={"startease-cli"} />
         </Card>
 
         {/*  */}
@@ -62,10 +72,9 @@ export default function Home() {
           <StepIndicator step={3} />
           <p>
             Answer the prompts to select your project type, framework, and
-            complexity. Sit back as Project-starter-cli automates file creation
-            and project setup. With Project-starter-cli, you can focus on
-            building your vision without being bogged down by setup
-            complexities.
+            complexity. Sit back as StartEase automates file creation and
+            project setup. With StartEase, you can focus on building your vision
+            without being bogged down by setup complexities.
           </p>
         </Card>
       </section>
@@ -73,14 +82,12 @@ export default function Home() {
       {/* features */}
 
       <section className="my-[6.25rem] flex flex-col container">
-        <div className="flex flex-col items-center justify-center gap-6 mb-[6.25rem]">
-          <Button asChild className={"px-10 text-lg mx-auto text-center"}>
-            <h2>Features</h2>
-          </Button>
+        <div className="flex flex-col items-center justify-center gap-6 mb-[6.25rem] px-5">
+          <h2 className="text-xl text-center md:text-2xl lg:text-3xl text-primary">
+            Features
+          </h2>
 
-          <p className="text-primary">
-            Experience the power of Project-starter-cli:
-          </p>
+          <p className="text-primary">Experience the power of StartEase:</p>
         </div>
 
         {/* features */}
@@ -90,8 +97,8 @@ export default function Home() {
             <StepIndicator step={1} />
             <p>
               <span className="font-bold text-white">Effortless Setup:</span>{" "}
-              Say goodbye to tedious project setup tasks. Let
-              Project-starter-cli handle the heavy lifting.
+              Say goodbye to tedious project setup tasks. Let StartEase handle
+              the heavy lifting.
             </p>
           </Card>
           {/*  */}
@@ -130,19 +137,25 @@ export default function Home() {
 
       <section className="my-[6.25rem] flex flex-col container">
         <div className="flex flex-col items-center justify-center gap-6 mb-[4.675rem]">
-          <Button asChild className={"p-7 text-lg mx-auto text-center"}>
-            <h2>Contribution Guidelines</h2>
-          </Button>
+          <h3 className="text-xl font-semibold text-center md:text-2xl lg:text-3xl text-primary">
+            Contribution Guidelines
+          </h3>
 
-          <p className="text-primary text-center">
-            We appreciate contributions from the community to enhance
-            Project-starter-cli. Here&apos;s how you can get involved:
+          <p className="text-center text-primary">
+            We appreciate contributions from the community to enhance StartEase.
+            Here&apos;s how you can get involved:
           </p>
+
+          <Button asChild>
+            <Link href={"https://github.com/JC-Coder/startease"}>
+              Get Started
+            </Link>
+          </Button>
         </div>
 
         {/* lists */}
 
-        <div className="relative flex items-center justify-center w-full gap-10 px-5">
+        {/* <div className="relative flex items-center justify-center w-full gap-10 px-5">
           <ul className="list-disc">
             <li>Fork the repository and clone your fork.</li>
             <li>Create a new branch for feature or bug fix.</li>
@@ -161,9 +174,9 @@ export default function Home() {
           <Image
             src={Arrow}
             alt=""
-            className="-translate-y-20 hidden md:block"
+            className="hidden -translate-y-20 md:block"
           />
-        </div>
+        </div> */}
       </section>
     </main>
   )
