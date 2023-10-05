@@ -4,13 +4,16 @@ import { Tabs, Tab } from "@nextui-org/tabs";
 const Installation = () => {
   return (
     <>
-      <section id="installation" className="grid justify-center max-w-5xl mx-auto px-5 py-14 md:px-20 gap-14 md:gap-24 md:my-20 ">
+      <section
+        id="installation"
+        className="grid justify-center max-w-5xl mx-auto px-5 py-14 md:px-20 gap-14 md:gap-24 md:my-20 "
+      >
         <div>
           <Typography variant="h2">Installation</Typography>
         </div>
         <div className="flex gap-2 md:gap-10">
           <div>
-            <span className="bg-secondary px-3 py-1 rounded-md">
+            <span className="bg-gray-800 px-3 py-1 rounded-md">
               <Typography variant="p.medium">1</Typography>
             </span>
           </div>
@@ -19,7 +22,7 @@ const Installation = () => {
               <Typography variant="h2">
                 Install <span className="text-secondary">StartEase</span>
               </Typography>
-              <Typography variant="p">
+              <Typography variant="p.medium">
                 Run the following command to install{" "}
                 <span className="text-secondary">StartEase</span> globally.
               </Typography>
@@ -38,7 +41,7 @@ const Installation = () => {
         </div>
         <div className="flex gap-2 md:gap-10">
           <div>
-            <span className="bg-secondary px-3 py-1 rounded-md">
+            <span className="bg-gray-800 px-3 py-1 rounded-md">
               <Typography variant="p.medium">2</Typography>
             </span>
           </div>
@@ -57,7 +60,7 @@ const Installation = () => {
         </div>
         <div className="flex gap-3 md:gap-10">
           <div>
-            <span className="bg-secondary px-3 py-1 rounded-md">
+            <span className="bg-gray-800 px-3 py-1 rounded-md">
               <Typography variant="p.medium">3</Typography>
             </span>
           </div>
