@@ -3,7 +3,7 @@ import { ButtonItem, Typography } from "@/components";
 const Hero = () => {
   return (
     <>
-      <section className="bg-background">
+      <section className="bg-background py-10">
         <div className="flex justify-center ">
           <div className=" grid gap-5 md:gap-10 justify-items-center text-center py-5 md:py-10 px-5 md:px-10">
             <div className="max-w-5xl ">
