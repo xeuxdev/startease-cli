@@ -11,7 +11,7 @@ export default function Home() {
     <main>
       <section className="flex items-center justify-center p-8 text-[#D0D0D0] flex-col gap-5">
         <h1 className="text-2xl md:text-4xl text-center lg:text-6xl font-bold md:[text-wrap:balance] py-20 ">
-          Welcome to <span className="text-[#B50101]">StartEase </span>
+          Welcome to <span className="text-[#B50101]">StartEase, </span>
           Streamline Your Project Setup Process with Ease
         </h1>
         <p className="text-base text-center md:text-lg [text-wrap:balance]">
@@ -54,6 +54,9 @@ export default function Home() {
 
           <p>yarn</p>
           <Code snippet={"yarn global add startease-cli"} />
+
+          <p>pnpm</p>
+          <Code snippet={"pnpm install startease-cli"} />
         </Card>
         {/*  */}
         <Card>
