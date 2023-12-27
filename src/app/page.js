@@ -143,9 +143,9 @@ export default function Home() {
         <UsageCount />
 
         <div className="flex flex-col items-center justify-center gap-6 mb-[4.675rem]">
-          <h4 className="text-xl font-semibold text-center md:text-2xl lg:text-3xl text-primary">
+          <h3 className="text-xl font-semibold text-center md:text-2xl lg:text-3xl text-primary">
             Contribution Guidelines
-          </h4>
+          </h3>
 
           <p className="text-center text-primary">
             We appreciate contributions from the community to enhance StartEase.
