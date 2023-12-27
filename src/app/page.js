@@ -5,6 +5,7 @@ import StepIndicator from "@/components/ui/step"
 import Image from "next/image"
 import Link from "next/link"
 import HeroImage from "../../public/startease.webp"
+import UsageCount from "@/components/usage-count"
 
 export default function Home() {
   return (
@@ -139,10 +140,12 @@ export default function Home() {
       {/* contribution */}
 
       <section className="my-[6.25rem] flex flex-col container">
+        <UsageCount />
+
         <div className="flex flex-col items-center justify-center gap-6 mb-[4.675rem]">
-          <h3 className="text-xl font-semibold text-center md:text-2xl lg:text-3xl text-primary">
+          <h4 className="text-xl font-semibold text-center md:text-2xl lg:text-3xl text-primary">
             Contribution Guidelines
-          </h3>
+          </h4>
 
           <p className="text-center text-primary">
             We appreciate contributions from the community to enhance StartEase.
@@ -155,31 +158,6 @@ export default function Home() {
             </Link>
           </Button>
         </div>
-
-        {/* lists */}
-
-        {/* <div className="relative flex items-center justify-center w-full gap-10 px-5">
-          <ul className="list-disc">
-            <li>Fork the repository and clone your fork.</li>
-            <li>Create a new branch for feature or bug fix.</li>
-            <li>Develop and test your changes.</li>
-            <li>Commit your changes and create a pull request.</li>
-            <li>
-              Our maintainers will review your pull request and provide
-              feedback.
-            </li>
-            <li>
-              Your contribution help make project starter cli better for
-              everyone!.
-            </li>
-          </ul>
-
-          <Image
-            src={Arrow}
-            alt=""
-            className="hidden -translate-y-20 md:block"
-          />
-        </div> */}
       </section>
     </main>
   )
