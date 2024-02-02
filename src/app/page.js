@@ -1,15 +1,29 @@
-import { Card, CardHeader } from "@/components/card"
-import Code from "@/components/code"
-import { Button } from "@/components/ui/button"
-import StepIndicator from "@/components/ui/step"
-import Image from "next/image"
-import Link from "next/link"
-import HeroImage from "../../public/startease.webp"
-import UsageCount from "@/components/usage-count"
+import { Card, CardHeader } from '@/components/card';
+import Code from '@/components/code';
+import { Button } from '@/components/ui/button';
+import StepIndicator from '@/components/ui/step';
+import Image from 'next/image';
+import Link from 'next/link';
+import HeroImage from '../../public/startease.webp';
+import UsageCount from '@/components/usage-count';
+import Script from 'next/script';
 
 export default function Home() {
   return (
     <main>
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-33MNKE21X4"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-33MNKE21X4');
+        `}
+      </Script>
       <section className="flex items-center justify-center p-8 text-[#D0D0D0] flex-col gap-5">
         <h1 className="text-2xl md:text-4xl text-center lg:text-6xl font-bold md:[text-wrap:balance] py-20 ">
           Welcome to <span className="text-[#B50101]">StartEase, </span>
@@ -25,7 +39,7 @@ export default function Home() {
         </p>
 
         <Button className="my-20" asChild>
-          <Link href={"https://github.com/JC-Coder/startease"} target="_blank">
+          <Link href={'https://github.com/JC-Coder/startease'} target="_blank">
             Get Started
           </Link>
         </Button>
@@ -51,13 +65,13 @@ export default function Home() {
           </p>
 
           <p>npm</p>
-          <Code snippet={"npm install -g startease-cli"} />
+          <Code snippet={'npm install -g startease-cli'} />
 
           <p>yarn</p>
-          <Code snippet={"yarn global add startease-cli"} />
+          <Code snippet={'yarn global add startease-cli'} />
 
           <p>pnpm</p>
-          <Code snippet={"pnpm install startease-cli"} />
+          <Code snippet={'pnpm install startease-cli'} />
         </Card>
         {/*  */}
         <Card>
@@ -68,7 +82,7 @@ export default function Home() {
           <p>
             Open your terminal Run the following command to launch the CLI tool
           </p>
-          <Code snippet={"startease-cli"} />
+          <Code snippet={'startease-cli'} />
         </Card>
 
         {/*  */}
@@ -100,7 +114,7 @@ export default function Home() {
           <Card>
             <StepIndicator step={1} />
             <p>
-              <span className="font-bold text-white">Effortless Setup:</span>{" "}
+              <span className="font-bold text-white">Effortless Setup:</span>{' '}
               Say goodbye to tedious project setup tasks. Let StartEase handle
               the heavy lifting.
             </p>
@@ -111,7 +125,7 @@ export default function Home() {
             <p>
               <span className="font-bold text-white">
                 Framework Flexibility:
-              </span>{" "}
+              </span>{' '}
               Supports popular frameworks like Express.js, Nest.js, and
               React.js.
             </p>
@@ -120,7 +134,7 @@ export default function Home() {
           <Card>
             <StepIndicator step={3} />
             <p>
-              <span className="font-bold text-white">Basic or Advanced:</span>{" "}
+              <span className="font-bold text-white">Basic or Advanced:</span>{' '}
               Choose between basic or advanced project configurations based on
               your needs.
             </p>
@@ -129,7 +143,7 @@ export default function Home() {
           <Card>
             <StepIndicator step={4} />
             <p>
-              <span className="font-bold text-white">Customization:</span>{" "}
+              <span className="font-bold text-white">Customization:</span>{' '}
               Extend and customize generated files to match your project&apos;s
               unique requirements.
             </p>
@@ -153,12 +167,12 @@ export default function Home() {
           </p>
 
           <Button asChild>
-            <Link href={"https://github.com/JC-Coder/startease"}>
+            <Link href={'https://github.com/JC-Coder/startease'}>
               Get Started
             </Link>
           </Button>
         </div>
       </section>
     </main>
-  )
+  );
 }
